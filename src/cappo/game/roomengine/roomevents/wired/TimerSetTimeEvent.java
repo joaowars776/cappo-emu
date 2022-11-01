@@ -1,0 +1,47 @@
+/*  1:   */ package cappo.game.roomengine.roomevents.wired;
+/*  2:   */ 
+/*  3:   */ import cappo.engine.player.Connection;
+/*  4:   */ import cappo.engine.threadpools.RoomTask;
+/*  5:   */ import cappo.game.player.PlayerData;
+/*  6:   */ import cappo.game.roomengine.entity.item.floor.wired.trigger.TimerResetTrigger;
+/*  7:   */ import cappo.game.roomengine.roomevents.Event;
+/*  8:   */ 
+/*  9:   */ public class TimerSetTimeEvent
+/* 10:   */   extends Event
+/* 11:   */ {
+/* 12:   */   private final TimerResetTrigger wired;
+/* 13:   */   private final Connection invoker;
+/* 14:   */   
+/* 15:   */   public TimerSetTimeEvent(TimerResetTrigger item, Connection ivk)
+/* 16:   */   {
+/* 17:13 */     this.wired = item;
+/* 18:14 */     this.invoker = ivk;
+/* 19:   */   }
+/* 20:   */   
+/* 21:   */   public boolean equals(Object arg0)
+/* 22:   */   {
+/* 23:19 */     if (super.equals(arg0))
+/* 24:   */     {
+/* 25:20 */       TimerSetTimeEvent comp = (TimerSetTimeEvent)arg0;
+/* 26:21 */       if (this.invoker == null) {
+/* 27:22 */         return comp.invoker == null;
+/* 28:   */       }
+/* 29:24 */       return (comp.invoker != null) && (comp.invoker.playerData.userId == this.invoker.playerData.userId);
+/* 30:   */     }
+/* 31:28 */     return false;
+/* 32:   */   }
+/* 33:   */   
+/* 34:   */   public void run(RoomTask room)
+/* 35:   */   {
+/* 36:33 */     if ((this.wired.getRoom() != room) || (this.wired.wiredManager == null)) {
+/* 37:34 */       return;
+/* 38:   */     }
+/* 39:37 */     TimerResetTrigger.doTrigger(this.wired, this.invoker);
+/* 40:   */   }
+/* 41:   */ }
+
+
+/* Location:           C:\Users\Manel\Downloads\cappo.zip
+ * Qualified Name:     cappo.game.roomengine.roomevents.wired.TimerSetTimeEvent
+ * JD-Core Version:    0.7.0.1
+ */

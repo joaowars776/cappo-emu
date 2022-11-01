@@ -1,0 +1,23 @@
+/*  1:   */ package cappo.protocol.messages.events.games.snowwar;
+/*  2:   */ 
+/*  3:   */ import cappo.engine.network.MessageReader;
+/*  4:   */ import cappo.engine.player.Connection;
+/*  5:   */ import cappo.game.player.SnowWarPlayerData;
+/*  6:   */ import cappo.protocol.messages.IncomingMessageEvent;
+/*  7:   */ 
+/*  8:   */ public class MakeSnowballParser
+/*  9:   */   extends IncomingMessageEvent
+/* 10:   */ {
+/* 11:   */   public void messageReceived(Connection Main)
+/* 12:   */   {
+/* 13:15 */     Main.currentPacket.readInt();
+/* 14:16 */     Main.currentPacket.readInt();
+/* 15:17 */     Main.snowWarPlayerData.makeSnowBall();
+/* 16:   */   }
+/* 17:   */ }
+
+
+/* Location:           C:\Users\Manel\Downloads\cappo.zip
+ * Qualified Name:     cappo.protocol.messages.events.games.snowwar.MakeSnowballParser
+ * JD-Core Version:    0.7.0.1
+ */
