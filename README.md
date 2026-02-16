@@ -17,3 +17,6 @@ It was also the stage for the 'pushuser and pulluser' minigame (push x pull), th
 <img width="1223" height="614" alt="image" src="https://github.com/user-attachments/assets/a133fad2-b742-4194-81bb-b569106b3287" />
 
 <img width="1133" height="614" alt="image" src="https://github.com/user-attachments/assets/245e4086-5ff9-4a43-8285-a883a39a97b5" />
+
+<img width="686" height="386" alt="image" src="https://github.com/user-attachments/assets/3662f90f-45d6-40d4-9be8-1ceabb2fb4d6" />
+
